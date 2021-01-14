@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<title>Vimeo</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<div id="play_demo"></div>
+				<hr>
+				<p id="display"></p>
+				<hr>
+				Text Tracks
+				<select class="form-control form-control-sm" id="textTracks">
+					<option value="de">Deutsch</option>
+					<option value="en">English</option>
+					<option value="es">Espanol</option>
+					<option value="fr">Francais</option>
+				</select>
+				<hr>
+				Available Qualities
+				<select class="form-control form-control-sm" id="qualitySelect">
+						<option value="auto" selected="">Auto</option>
+						<option value="720p">720p</option>
+						<option value="540p">540p</option>
+						<option value="360p">360p</option>
+						<option value="240p">240p</option>
+				</select>
+				<hr>
+				Color
+				<div class="col-md-2">
+					<input type="color" class="form-control form-control-sm" id="changeColor">
+				</div>
+			</div>
+			<div class="col-md-5">
+				<button class="btn btn-primary btn-sm" id="btnPlay">Play</button>
+				<button class="btn btn-primary btn-sm" id="btnPause">Pause</button>
+				<button class="btn btn-primary btn-sm" id="btnUploadVideo">Unload Video</button>
+				<button class="btn btn-primary btn-sm btn-secondary" id="btnFullScreen">Full Screen</button>
+				<hr>
+				<button class="btn btn-primary btn-sm" id="btnMute">Mute</button>
+				<button class="btn btn-primary btn-sm" id="btnUnmute">Unmute</button>
+				<button class="btn btn-warning btn-sm" id="btnTextTrack">Disable Text Track</button>
+				<button class="btn btn-success btn-sm" id="btnPIP">Picture In Picture</button>
+				<hr>
+				<input type="text" class="form-control form-control-sm" id="load-video" value="76979871">
+				<button class="btn btn-primary btn-sm" id="btnLoadVideo">Load Video</button>
+				<button class="btn btn-primary btn-sm" id="btnVideoUrl">Video URL</button>
+				<button class="btn btn-primary btn-sm" id="btnTitle">Title</button>
+				<hr>
+				<input type="text" class="form-control form-control-sm" id="current-time-input" >
+				<button class="btn btn-primary btn-sm" id="btnCurrentTime">Set Current Time</button>
+				<hr>
+				<input type="text" class="form-control form-control-sm" id="play-rate" placeholder="Player on a scale from 0.5 to 2">
+				<button class="btn btn-primary btn-sm" id="btnPlayRate">Set Play Rate</button>
+				<hr>
+				<button class="btn btn-primary btn-sm" id="btnLoop">Loop</button>
+				<button class="btn btn-info btn-sm" id="btnUnloop">Unloop</button>
+				<hr>
+				<input type="text" class="form-control form-control-sm" id="volume" placeholder="Player on a scale from 0 to 1" >
+				<button class="btn btn-primary btn-sm" id="btnVolume">Volume</button>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script src="https://player.vimeo.com/api/player.js"></script>
+	<script src="common.js"></script>
+</body>
+</html>
