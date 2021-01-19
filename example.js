@@ -223,4 +223,25 @@ $(document).ready(function($) {
         console.log('Event camerachange :yaw: ',data.yaw,'pitch:',data.pitch,'roll:',data.roll,'fov:',data.fov);
     };
     player.on('camerachange', camerachange);
+
+    player.addCuePoint(15, { customKey: 'customValue' }).then(function(id) {
+        // cue point was added successfully
+        console.log('addCuePoint:',id);
+        }).catch(function(error) {
+    });
+
+    player.addCuePoint(50, { customKey: 'customValue' }).then(function(id) {
+        console.log('addCuePoint:',id);
+        }).catch(function(error) {
+    });
+
+    player.getCuePoints().then(function(cuePoints) {
+        console.log('getCuePoints:',cuePoints);
+        }).catch(function(error) {
+    });
+
+    // player.removeCuePoint('00110000-0101-4133-8001-101122310302').then(function(id) {
+    //     console.log('removeCuePoint:',id);
+    //     }).catch(function(error) {
+    // });
 });
